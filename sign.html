@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <style>
+    body{
+        background-color: lightblue;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+    }
+    h1{
+        text-shadow: 2px 3px orangered, 3px 4px red;
+        margin: auto;
+    
+        
+    }
+    #logo{
+        margin: auto;
+        padding: 5px;
+        width:25%;      
+    }
+
+    div{
+
+        width: 50px;
+        padding-top: -20px;
+        padding: -20px;
+        position: relative;
+
+    }
+        
+    table{
+        padding-left: 110px;
+        padding-right: 70px;
+        padding-top: 50px;
+        padding-bottom: -10px;
+        background-image: linear-gradient(rgba(255,0,0,0),rgba(255, 99, 71,1));
+        border: 5px solid;
+        width: 100px;
+        margin-top:30px;
+        margin-left: 410px;
+    
+
+    }
+    nav ul{
+                list-style: none;
+                margin: 0;
+                margin-top: -100px;
+                padding-top:-10px;
+                padding-bottom: 40px;
+                padding-left: 400px;
+            }
+            nav ul li{
+                float:left;
+                border:1px solid rgb(230, 46, 0);
+                width:15%;
+            }
+            nav ul li a{
+                background: rgb(0, 0, 0);
+                display: block;
+                padding: 10% 1%;
+                font-weight: bold;
+                font-size: 18px;
+                color:rgb(230, 172, 0);
+                text-decoration: none;
+                text-align: center;
+            }
+            nav ul li a:hover, nav ul li .active a{
+                background-color:rgb(119, 175, 189) ;
+                color:rgb(0, 0, 0) ;
+            }
+    </style>
+    <script>
+    
+    function validate(){
+        var x = document.getElementById('name').value;
+        var y = document.getElementById('p').value;
+        var z = document.getElementById('cp').value;
+        var a = document.getElementById('num').value;
+        var b = document.getElementById('mail').value;
+        if (x == "") {
+            //alert("no username entered");
+            document.getElementById("uerror").style.visibility = 'visible';
+            document.getElementById("uerror").style.color = "red";
+            return false;
+        }
+        else if (y == "") {
+            //alert("no username entered");
+            document.getElementById("yerror").style.visibility = 'visible';
+            document.getElementById("yerror").style.color = "red";
+            return false;
+        }
+        else if (z == "") {
+            //alert("no username entered");
+            document.getElementById("zerror").style.visibility = 'visible';
+            document.getElementById("zerror").style.color = "red";
+            return false;
+        }
+        else if (a == "") {
+            //alert("no username entered");
+            document.getElementById("aerror").style.visibility = 'visible';
+            document.getElementById("aerror").style.color = "red";
+            return false;
+        }
+        else if (b == "") {
+            //alert("no username entered");
+            document.getElementById("berror").style.visibility = 'visible';
+            document.getElementById("berror").style.color = "red";
+            return false;
+        }
+        if(a.length!=10){
+            alert('enter 10 digit number')
+            return false;
+        }
+        if(y!=z){  
+            alert("password is not same!");  
+            return false;  
+        }
+        else return true;
+        
+    }
+    
+    </script>
+</head>
+<body background="photo.jpg">
+
+    <center>
+    <h1>JORDAN</h1></center>
+    <div id="logo"><img src="image.png" width="300" height="200"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <nav>
+        <ul type="none">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sign.html">Sign up</a></li> 
+            <li><a href="https://www.nike.com/jordan ">Website</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div>
+    <form onsubmit="return validate()" action="">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="" id="name"> </td>
+                <td><div id="uerror" style="visibility:hidden">no username is entered</div></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="" id="p" ></td>
+                <td><div id="yerror" style="visibility:hidden">no password is entered</div></td>
+            </tr>
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="" id="cp"></td>
+                <td><div id="zerror" style="visibility:hidden">no password is entered</div></td>
+            </tr>
+            <tr>
+                <td>
+                    Phone number
+                </td>
+                <td><input type="number" name="" id="num" ></td>
+                <td><div id="aerror" style="visibility:hidden">no number is entered</div></td>
+                <td><div id="qerror" style="visibility:hidden">enter 10 digit number</div></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="" id="mail" > </td>
+                <td><div id="berror" style="visibility:hidden">no email entered</div></td>
+            </tr>
+            <tr>
+                <td>Choose the sports</td>
+                <td><select name="" id=""> 
+                    <option value="" default>Basketball </option>
+                    <option value=" ">Cricket</option>
+                    <option value=" ">Football</option></select>
+                </td>
+
+            </tr><br><br><br><br><br>
+            <tr><td><input type="submit"></td>
+            <td><input type="reset"></td></tr>
+        </table>
+    </form>
+    </div>
+
+
+    
+</body>
+</html>
